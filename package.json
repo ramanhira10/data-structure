@@ -1,0 +1,23 @@
+{
+  "name": "data-structure",
+  "version": "1.0.0",
+  "description": "Data structure in javascript with es6",
+  "main": "LinkedList.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ramanhira10/data-structure.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ramanhira10/data-structure/issues"
+  },
+  "homepage": "https://github.com/ramanhira10/data-structure#readme",
+  "devDependencies": {
+    "jest": "^24.1.0"
+  }
+}
