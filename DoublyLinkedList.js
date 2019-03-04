@@ -57,17 +57,74 @@ class DoublyLinkedList {
         }
     }
 
-    insertAfter () {}
+    insertAfter (data, toNodeData) {
+        
+        let current = this.head;
 
-    traverse () {}
+        while (current) {
 
-    traverseReverse () {}
+            if (current.data === toNodeData) {
+            
+                let node = new Node(data);
+
+                if (current === this.tail) {
+                    
+                    this.add(data);
+                } else {
+                    
+                    current.next.previous = node;
+                    node.previous = current;
+                    node.next = current.next;
+                    current.next = node;
+                    this.numberOfValues++;
+                }
+            }
+
+            current = current.next;
+        }
+    }
+
+    traverse (fn) {
+
+        let current = this.head;
+        
+        while (current) {
+            if (fn) {
+                fn(current);
+            }
+            current = current.next;
+        }
+    }
+
+    traverseReverse (fn) {
+        
+        let current = this.tail;
+
+        while (current) {
+
+            if (fn) {
+                fn(current);
+            }
+            current = current.previous;
+        }
+    }
 
     length () {
         return this.numberOfValues;
     }
 
-    print () {}
+    print () {
+
+        let string = '',
+            current = this.head;
+
+        while (current) {
+            string += current.data + ' ';
+            current = current.next;
+        }
+
+        console.log(string.trim());
+    }
 }
 
 module.exports = DoublyLinkedList;
